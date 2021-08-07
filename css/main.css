@@ -132,10 +132,6 @@ body {
   display: inline-block;
 }
 
-.heading-3--under {
-  font-size: 6rem;
-}
-
 .heading-3--under::after {
   content: '';
   width: 50%;
