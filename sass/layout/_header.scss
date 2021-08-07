@@ -56,7 +56,7 @@
         color: $color-primary;
         position: relative;
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           display: block;
           bottom: 0.7rem;
@@ -80,5 +80,15 @@
       display: inline-block;
       margin-left: 4.5rem;
     }
+  }
+}
+.header--blog {
+  height: $header-height !important;
+  background-image: none !important;
+  .logo {
+    padding: 1rem 0;
+  }
+  .main-nav.sticky {
+    box-shadow: none;
   }
 }

@@ -1,6 +1,6 @@
 @mixin clearfix {
   &::after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -60,5 +60,19 @@
   @media (max-width: 1040px) {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+@mixin underline-after($width) {
+  &::after {
+    content: '';
+    width: $width;
+    height: 5px;
+    background-color: $color-primary;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    z-index: -1;
   }
 }

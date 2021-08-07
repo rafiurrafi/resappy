@@ -1,0 +1,43 @@
+.blog-header {
+  display: flex;
+  height: 70vh;
+  box-shadow: 0 0 2rem rgba($color: #000000, $alpha: 0.15);
+  @media (max-width: 760px) {
+    display: block;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 5rem;
+    position: relative;
+    @media (max-width: 760px) {
+      height: 80vh;
+    }
+  }
+  &__img {
+    flex: 0 0 50%;
+    @media (max-width: 760px) {
+      height: 35vh;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__hot {
+    position: absolute;
+    right: 3rem;
+    bottom: 5rem;
+    font-size: 1rem;
+    color: $color-primary;
+    vertical-align: middle;
+  }
+  &__views {
+    display: block;
+    color: $color-dark;
+  }
+}

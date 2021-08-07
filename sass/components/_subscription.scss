@@ -1,0 +1,71 @@
+.subscription {
+  padding: 10rem 0;
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+  @include respond(phone) {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @media (max-width: 390px) {
+    width: 95%;
+  }
+  &__text {
+    text-align: left;
+    font-size: 3.3rem;
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+    span {
+      color: $color-primary;
+    }
+  }
+  &__form {
+    display: flex;
+    width: 105%;
+    margin: 2rem 0;
+  }
+  &__input {
+    flex: 0 0 70%;
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    background-color: $color-gray-1;
+    @include respond(phone) {
+      flex: 0 0 60%;
+      padding: 1.2rem 1.5rem;
+      font-size: 1.7rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__submit {
+    cursor: pointer;
+    flex: 1;
+    border: none;
+    background-color: lighten($color: $color-primary, $amount: 0.3);
+    font-size: 2rem;
+    color: $color-white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  &__policy {
+    color: $color-dark;
+    font-size: 1.5rem;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    @include respond(phone) {
+      width: 80%;
+    }
+    a {
+      color: $color-secondary;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+}

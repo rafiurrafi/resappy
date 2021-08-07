@@ -11,26 +11,65 @@ body {
   font-size: 8rem;
   font-weight: 600;
   line-height: 1;
+  &--under {
+    position: relative;
+    display: inline-block;
+    @include underline-after(40%);
+  }
 }
 .heading-tertiary {
   font-size: 5rem;
   font-weight: 700;
   position: relative;
   display: inline-block;
-  &::after {
-    content: "";
-    width: 70%;
-    height: 5px;
-    background-color: $color-primary;
+  @include underline-after(70%) // &::after {
+    //   content: '';
+    //   width: 70%;
+    //   height: 5px;
+    //   background-color: $color-primary;
+    //   display: inline-block;
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 1rem;
+    //   z-index: -1;
+    // };;;;;;;;;;;;;;;
+}
+.heading-3 {
+  font-size: 5.5rem;
+  font-weight: 700;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  &--under,
+  span {
+    position: relative;
     display: inline-block;
-    position: absolute;
-    left: 0;
-    bottom: 1rem;
-    z-index: -1;
+  }
+  &--under {
+    font-size: 6rem;
+    @include underline-after(50%);
+  }
+  span {
+    @include underline-after(100%);
+    z-index: 1;
+    // &::after {
+    //   content: '';
+    //   width: 50%;
+    //   height: 5px;
+    //   background-color: $color-primary;
+    //   display: inline-block;
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 1rem;
+    //   z-index: -1;
+    // };;;;;;;;;
   }
 }
 .heading-tetra {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
+}
+.heading-4 {
+  font-size: 3.3rem;
+  font-weight: 700;
 }
