@@ -481,7 +481,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70vh;
+  height: 60vh;
   -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
 }
