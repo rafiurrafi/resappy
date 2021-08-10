@@ -54,6 +54,11 @@
       display: inline-block;
     }
   }
+  &.load-more-button {
+    &:hover {
+      color: white !important;
+    }
+  }
 }
 .buttons {
   display: flex;

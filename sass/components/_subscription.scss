@@ -4,7 +4,7 @@
   margin: 0 auto;
   text-align: center;
   .heading-secondary {
-    font-size: 7.5rem;
+    font-size: 6rem;
   }
   @include respond(phone) {
     width: 90%;
@@ -15,7 +15,7 @@
   }
   &__text {
     text-align: left;
-    font-size: 2.7rem;
+    font-size: 2rem;
     @include respond(phone) {
       font-size: 2.5rem;
     }
