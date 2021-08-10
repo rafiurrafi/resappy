@@ -1,30 +1,15 @@
-// const blogContentMenu = document.querySelectorAll('.blog-content__menu a')
-// const allBlogsLink = document.querySelector('.all-blogs')
-// const blogControls = document.querySelector('.blog-controls')
+const blogContentMenu = document.querySelectorAll(".blog-content__menu a");
+const allBlogsLink = document.querySelector(".all-blogs");
+const blogControls = document.querySelector(".blog-controls");
 
-// blogContentMenu.forEach((menu) => {
-//   menu.addEventListener('click', () => {
-//     blogContentMenu.forEach((item) => {
-//       item.classList.remove('active')
-//     })
-//     menu.classList.add('active')
-//   })
-// })
-
-// var $grid = $('.blog-content__box').isotope({
-//   // options
-// })
-// // filter items on button click
-// $('.blog-content__menu').on('click', 'a', function () {
-//   var filterValue = $(this).attr('data-filter')
-//   $grid.isotope({ filter: filterValue })
-//   //show the controls
-//   if (allBlogsLink.classList.contains('active')) {
-//     blogControls.classList.remove('d-none')
-//   } else {
-//     blogControls.classList.add('d-none')
-//   }
-// })
+blogContentMenu.forEach((menu) => {
+  menu.addEventListener("click", () => {
+    blogContentMenu.forEach((item) => {
+      item.classList.remove("active");
+    });
+    menu.classList.add("active");
+  });
+});
 
 // ====================================================
 //Modal open close
