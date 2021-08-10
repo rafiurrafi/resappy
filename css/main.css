@@ -1221,6 +1221,7 @@ body {
 
 .single-heading__content .heading-3 {
   margin-bottom: auto;
+  font-size: 5rem;
 }
 
 @media (max-width: 37.5em) {
