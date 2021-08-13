@@ -187,6 +187,11 @@ body {
   margin-bottom: 2rem;
 }
 
+.u-my-lg {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 .u-color-primary {
   color: #ee2b47;
 }
@@ -2251,6 +2256,22 @@ body {
 
 .isotope-pager .pager.active {
   color: #ee2b47;
+}
+
+.heading-price span {
+  position: relative;
+}
+
+.heading-price span::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #ee2b47;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0.7rem;
+  z-index: -1;
 }
 
 .section-single-heading {
