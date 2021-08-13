@@ -2289,9 +2289,17 @@ body {
 .price-cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  -ms-grid-columns: (minmax(22rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   grid-gap: 4rem;
+}
+
+@media (max-width: 56.25em) {
+  .price-cards {
+    -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 6rem;
+  }
 }
 
 .price-card {
