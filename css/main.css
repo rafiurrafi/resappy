@@ -209,6 +209,10 @@ body {
   display: none !important;
 }
 
+.d-block {
+  display: block;
+}
+
 .main-nav {
   font-size: 2rem;
 }
@@ -661,6 +665,10 @@ body {
 
 .btn--primary-light:hover {
   background-color: #ee2b47;
+}
+
+.btn--secondary {
+  background-color: #34374c;
 }
 
 .btn--learn {
@@ -2272,6 +2280,58 @@ body {
   left: 0;
   bottom: 0.7rem;
   z-index: -1;
+}
+
+.section-price-card {
+  padding: 11rem 0;
+}
+
+.price-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 4rem;
+}
+
+.price-card {
+  padding: 4rem 2rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.price-card__heading {
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.price-card__heading::after {
+  content: "";
+  width: 7rem;
+  height: 5px;
+  background-color: #ee2b47;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0.7rem;
+  z-index: -1;
+}
+
+.price-card__text {
+  font-size: 1.5rem;
+}
+
+.price-card__btn {
+  display: block;
+  text-align: center;
+  color: #fff;
+  padding: 1rem 0;
+  background-color: #34374c;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
 }
 
 .section-single-heading {

@@ -32,6 +32,9 @@
       }
     }
   }
+  &--secondary {
+    background-color: $color-secondary;
+  }
   &--learn {
     padding-left: 0;
     font-weight: 700;
