@@ -2347,6 +2347,45 @@ body {
   width: calc(100% - 4rem);
 }
 
+.price-table {
+  width: 100%;
+  border: 1px solid #f1f1f1;
+  border-collapse: collapse;
+}
+
+.price-table th:first-of-type,
+.price-table td:first-of-type {
+  width: 30%;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.price-table th,
+.price-table td {
+  font-weight: 700;
+  text-align: center;
+}
+
+.price-table th:not(:first-child),
+.price-table td:not(:first-child) {
+  width: 15%;
+}
+
+.price-table tr,
+.price-table td,
+.price-table th {
+  padding: 1.5rem 0;
+  border: 1px solid #f1f1f1;
+  border-collapse: collapse;
+}
+
+.single-tr {
+  width: 100% !important;
+  background-color: #f1f1f1;
+  padding: 2rem;
+  font-weight: 700;
+}
+
 .price-features {
   display: -ms-grid;
   display: grid;
