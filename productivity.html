@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Resappy - Your favorite restaurant</title>
+  </head>
+  <body>
+    <div class="body-content">
+      <header class="header header--productivity">
+        <nav class="main-nav">
+          <div class="row">
+            <a href="#" class="logo">
+              <img src="img/logo icon.svg" alt="" />
+            </a>
+            <ul class="main-nav__left">
+              <li>
+                <a href="#">Sell</a>
+              </li>
+              <li><a href="#">Market</a></li>
+              <li><a href="#">Manage</a></li>
+              <li><a href="#">عربي</a></li>
+            </ul>
+            <ul class="main-nav__right">
+              <li>
+                <a href="#"><i class="fa fa-search u-color-primary"></i></a>
+              </li>
+              <li class="dropdown">
+                <a href="#">Learn</a>
+                <div class="dropdown__content">
+                  <a class="dropdown__link" href="#">Learn</a>
+                  <p class="dropdown__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Impedit dicta
+                  </p>
+                  <div class="dropdown__menu">
+                    <nav class="dropdown__menu-left">
+                      <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="">Why Sell online</a></li>
+                        <li><a href="">Solutions by industry</a></li>
+                      </ul>
+                    </nav>
+                    <nav class="dropdown__menu-right">
+                      <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guide</a></li>
+                        <li><a href="#">Pods</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Demo</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Pricing</a>
+              </li>
+              <li>
+                <a href="#">Login</a>
+              </li>
+              <a href="#" class="btn btn--primary u-ml-sm" onclick="openModal()"
+                >Get started for free</a
+              >
+            </ul>
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+              <a href="javascript:void(0)" class="mobile-menu__link"
+                ><i class="fa fa-search"></i
+              ></a>
+              <a
+                href="javascript:void(0)"
+                onclick="showMobileContent()"
+                class="mobile-menu__link"
+                ><i class="fa fa-bars"></i
+              ></a>
+            </div>
+            <div class="mobile-content">
+              <ul class="mobile-content__nav">
+                <li>
+                  <a href="#">Sell</a>
+                </li>
+                <li><a href="#">Market</a></li>
+                <li><a href="#">Manage</a></li>
+
+                <li class="dropdown">
+                  <a href="#">Learn</a>
+                  <div class="dropdown__content">
+                    <div class="dropdown__context">
+                      <a class="dropdown__link" href="#">Learn</a>
+                      <p class="dropdown__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Impedit dicta
+                      </p>
+                      <div class="dropdown__menu">
+                        <nav class="dropdown__menu-left">
+                          <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Help center</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="">Why Sell online</a></li>
+                            <li><a href="">Solutions by industry</a></li>
+                          </ul>
+                        </nav>
+                        <nav class="dropdown__menu-right">
+                          <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guide</a></li>
+                            <li><a href="#">Pods</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Demo</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">Pricing</a>
+                </li>
+                <li>
+                  <a href="#">Login</a>
+                </li>
+                <li><a href="#">عربي</a></li>
+                <a href="#" class="btn btn--primary" onclick="openModal()"
+                  >Get started for free</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="mobile-content__close"
+                  onclick="closeMobileContent()"
+                  >&times;</a
+                >
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="row">
+          <div class="header__text-box">
+            <img class="header__text-img" src="img/logo icon.svg" alt="" />
+            <p class="header__text-paragraph u-mb-sm">Resappy</p>
+            <h1 class="u-mb-sm">
+              We Deliver The Best <span id="line-break"></span>
+              <span id="typing"></span> <br />
+              &amp; help you connect with the customer
+            </h1>
+            <a href="#" class="btn btn--primary btn--primary-dark"
+              >Get your free account</a
+            >
+          </div>
+        </div>
+      </header>
+      
+      <section class="section-cta">
+        <div class="row">
+          <h1>Launch your restaurant in 3, 2, 1...</h1>
+          <a href="#" class="btn btn--primary btn--primary-dark"
+            >Get your free account</a
+          >
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="row">
+          <div class="footer__top">
+            <div class="footer__top-left">
+              <img src="img/footer-logo.svg" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus atque cum temporibus ipsum quisquam rem sapiente
+                reprehenderit illo. Voluptatem asperiores, iusto ea eos omnis at
+                vel aliquam unde laboriosam eius.
+              </p>
+            </div>
+            <div class="footer__top-middle">
+              <h4 class="heading-tetra">Solutions by industry</h4>
+              <nav class="footer__main-nav">
+                <ul>
+                  <li><a href="#">Productive families</a></li>
+                  <li><a href="#">Bakeries</a></li>
+                  <li><a href="#">Cafe</a></li>
+                  <li><a href="#">Eestaurant</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__top-right">
+              <h4 class="heading-tetra">Resappy partner's program</h4>
+              <nav class="footer__main-nav">
+                <ul>
+                  <li><a href="#">Referral partners program</a></li>
+                  <li><a href="#">Delivery Provider Register</a></li>
+                  <li><a href="#">Food and Bevery Supplier Register</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="row">
+            <div class="footer__bottom-left">2021 Resappy</div>
+            <div class="footer__bottom-right">
+              <a href="#">Terms and condition</a>
+              <a href="#">Privacy policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-email">
+      <div class="modal-email__content">
+        <a href="javascript:void(0)" class="btn--close" onclick="closeModal()"
+          >&times;</a
+        >
+        <label class="modal-email__label" for="">Enter your email</label>
+        <input
+          type="text"
+          placeholder="Enter your email address"
+          class="modal-email__input"
+        />
+        <a
+          href="javascript:void(0)"
+          class="btn btn--primary btn--primary-light"
+          onclick="openVerification()"
+          >Submit</a
+        >
+      </div>
+    </div>
+    <div class="modal-verification">
+      <div class="modal-verification__content">
+        <a href="javascript:void(0)" class="btn--close" onclick="closeModal()"
+          >&times;</a
+        >
+        <p class="modal-verification__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing.
+        </p>
+        <span class="modal-verification__timer"
+          ><span id="minute"></span> : <span id="second"></span
+        ></span>
+        <form action="" class="modal-verification__form">
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+        </form>
+        <a
+          href="javascript:void(0)"
+          class="btn btn--primary btn--primary-light"
+          onclick="closeModal()"
+          >Submit</a
+        >
+        <a
+          href="javascript:void(0)"
+          class="modal-verification__btn"
+          onclick="openModal();closeVerification()"
+          >Edit Email</a
+        >
+      </div>
+    </div>
+
+    <!-- <script src="js/jquery.min-2.2.4.js"></script> -->
+    <script src="js/jquery.min-2.2.4.js"></script>
+    <script src="js/jquery.waypoints.js"></script>
+    <!-- <script src="js/isotop.min.js"></script> -->
+    <!-- <script src="js/typed.min.js"></script> -->
+    <script src="js/modal.js"></script>
+  </body>
+</html>

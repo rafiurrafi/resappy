@@ -1,56 +1,3 @@
-// $(document).ready(function () {
-// ready
-
-// const items = [
-//   {
-//     img: "img/icons/1.svg",
-//     heading: "Item 1",
-//     paragraph:
-//       " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hicpariatur fugit vel at, quibusdam excepturi.",
-//     link: "#",
-//     filter: "marketing",
-//   },
-//   {
-//     img: "img/icons/1.svg",
-//     heading: "Item 2",
-//     paragraph:
-//       " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hicpariatur fugit vel at, quibusdam excepturi.",
-//     link: "#",
-//     filter: "sales",
-//   },
-//   {
-//     img: "img/icons/1.svg",
-//     heading: "Item 3",
-//     paragraph:
-//       " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hicpariatur fugit vel at, quibusdam excepturi.",
-//     link: "#",
-//     filter: "marketing",
-//   },
-//   {
-//     img: "img/icons/1.svg",
-//     heading: "Item 4",
-//     paragraph:
-//       " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hicpariatur fugit vel at, quibusdam excepturi.",
-//     link: "#",
-//     filter: "integration",
-//   },
-//   {
-//     img: "img/icons/1.svg",
-//     heading: "Item 5",
-//     paragraph:
-//       " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hicpariatur fugit vel at, quibusdam excepturi.",
-//     link: "#",
-//     filter: "design",
-//   },
-//   {
-//     img: "img/icons/1.svg",
-//     heading: "Item 6",
-//     paragraph:
-//       " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hicpariatur fugit vel at, quibusdam excepturi.",
-//     link: "#",
-//     filter: "crm",
-//   },
-// ];
 // ====================================================
 //Waypoint - sticky
 // ====================================================
@@ -84,6 +31,7 @@ for (let i = 6; i < features.length; i++) {
   features[i].classList.add('d-none')
 }
 //show laod more button
+if(loadMoreButton)
 loadMoreButton.classList.remove('d-none')
 getIsotopCode()
 
@@ -117,7 +65,7 @@ buttons.forEach((button) => {
 })
 
 //load more button execution
-
+if(loadMoreButton)
 loadMoreButton.addEventListener('click', () => {
   if (loadMoreButton.innerHTML == 'Load more') {
     loadMoreButton.innerHTML = 'Show less'

@@ -5,6 +5,7 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
+  
   .row {
     position: relative;
     height: 100%;
@@ -80,6 +81,9 @@
       display: inline-block;
       margin-left: 4.5rem;
     }
+  }
+  &--productivity{
+    background-image: linear-gradient(rgba($color-secondary, .7), rgba($color-secondary, .7)),url(../../img/BG-2.jpg);
   }
 }
 .header--blog {

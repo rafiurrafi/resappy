@@ -109,3 +109,8 @@
     }
   }
 }
+.btn.btn--primary{
+  &:hover{
+    color: white;
+  }
+}
