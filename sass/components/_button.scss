@@ -33,7 +33,12 @@
     }
   }
   &--secondary {
+    text-align: center;
+    color: $color-white;
+    padding: 1rem 0;
     background-color: $color-secondary;
+    text-decoration: none;
+    border-radius: 5px;
   }
   &--learn {
     padding-left: 0;
