@@ -100,6 +100,10 @@ body {
   z-index: -1;
 }
 
+.heading-secondary--small {
+  font-size: 7rem;
+}
+
 .heading-tertiary {
   font-size: 5rem;
   font-weight: 700;
@@ -2701,6 +2705,40 @@ body {
   -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   grid-gap: 3.3rem;
+}
+
+.prod-mockup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.prod-mockup .heading-secondary {
+  width: 50%;
+  font-size: 7rem;
+}
+
+.prod-mockup__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.prod-mockup__img img {
+  width: 100%;
+}
+
+.section-productivity-account {
+  width: 55%;
+  margin: 7rem auto;
+}
+
+.section-productivity-account p {
+  font-size: 3.3rem;
+}
+
+.section-productivity-account p span {
+  color: #ee2b47;
 }
 
 .section-single-heading {

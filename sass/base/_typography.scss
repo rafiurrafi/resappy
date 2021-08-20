@@ -16,6 +16,9 @@ body {
     display: inline-block;
     @include underline-after(40%);
   }
+  &--small{
+    font-size: 7rem;
+  }
 }
 .heading-tertiary {
   font-size: 5rem;
