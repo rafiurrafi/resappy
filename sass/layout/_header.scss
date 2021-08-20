@@ -69,6 +69,12 @@
         }
       }
     }
+    &--productivity{
+      width: 55%;
+      p{
+        font-size: 1.8rem;
+      }
+    }
   }
   &__text {
     &-paragraph {
@@ -83,7 +89,7 @@
     }
   }
   &--productivity{
-    background-image: linear-gradient(rgba($color-secondary, .7), rgba($color-secondary, .7)),url(../../img/BG-2.jpg);
+    background-image: linear-gradient(rgba($color-secondary, .8), rgba($color-secondary, .8)),url(../../img/BG-2.jpg);
   }
 }
 .header--blog {
