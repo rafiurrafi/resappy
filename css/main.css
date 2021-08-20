@@ -171,6 +171,13 @@ body {
   font-weight: 700;
 }
 
+.heading-title {
+  font-size: 3.5rem;
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .u-ml-sm {
   margin-left: 2rem;
 }
@@ -185,6 +192,11 @@ body {
 
 .u-mb-sm {
   margin-bottom: 2rem;
+}
+
+.u-my-md {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .u-my-lg {
@@ -2681,6 +2693,14 @@ body {
 
 .faq__ans {
   font-size: 1.8rem;
+}
+
+.productivity-features {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-gap: 3.3rem;
 }
 
 .section-single-heading {
