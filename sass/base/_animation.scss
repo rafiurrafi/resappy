@@ -1,0 +1,26 @@
+@keyframes moveToBottom {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+@keyframes moveToRightBottom {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100%, 70%);
+  }
+}
