@@ -6,9 +6,11 @@
   &__left {
     flex: 0 0 60%;
   }
-  &__numbers {
-    font-size: 30rem;
+  &__number-box {
     position: relative;
+    font-size: 30rem;
+  }
+  &__numbers {
     opacity: 0.8;
     height: 100%;
     width: 100%;
@@ -21,6 +23,10 @@
     position: absolute;
     top: 0;
     left: 0;
+    &-clone {
+      animation-duration: 0.5s;
+      animation-delay: 0.1s;
+    }
   }
   &__right {
     flex: 1;
