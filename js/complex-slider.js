@@ -7,10 +7,10 @@ for (let i = 0; i < numbers.length; i++) {
 }
 numbers[0].style.opacity = 1;
 var count = 0;
-console.log(count);
+//next slide function
 function nextSlide(n) {
   if (count > 4) return;
-  count++;
+  count += n;
   for (let i = 0; i < numbers.length; i++) {
     numbers[i].style.opacity = 0;
   }
@@ -18,12 +18,12 @@ function nextSlide(n) {
     numbers[count].style.opacity = 1;
   }, 100);
   // vertical slider
-  // imageToSlide.style.transform = "translateY(-50)px";
   imageToSlide.style.transform =
     "translate(" + 0 + "rem," + -count * 37 + "rem)";
 
   //clone and falling animation
   const cloneNumber = numbers[count - 1].cloneNode(true);
+  if (count !== 1) cloneNumber.style.animationDelay = ".1s";
   cloneNumber.style.opacity = 1;
   if (!(count % 2))
     cloneNumber.classList.add("complex-slider__number-clone--1");

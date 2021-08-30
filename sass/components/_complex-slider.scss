@@ -23,13 +23,11 @@
       color: $color-primary;
       animation-name: moveToRightBottom;
       animation-duration: 0.4s;
-      animation-delay: 0.1s;
     }
     &-clone--2 {
       color: $color-secondary;
       animation-name: moveToBottom;
       animation-duration: 0.4s;
-      animation-delay: 0.1s;
     }
   }
   // image
