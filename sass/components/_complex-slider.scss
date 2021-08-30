@@ -12,12 +12,13 @@
   }
   &__numbers {
     opacity: 0.8;
+    z-index: -10;
   }
   &__number {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
+    top: -5%;
+    left: -7%;
+
     &-clone--1 {
       color: $color-primary;
       animation-name: moveToRightBottom;
@@ -31,34 +32,31 @@
       animation-delay: 0.1s;
     }
   }
-  &__image-box {
-    height: 40vh;
-    width: 40vw;
-    position: relative;
-    background-image: url(../../img/icons/slider/plane-laptop-screen.svg);
+  // image
+  &__img-box {
+    background-image: url("../../img/icons/slider/plane-laptop-screen.svg");
     background-size: cover;
     background-position: center;
-  }
-  &__laptop {
+
+    height: 50rem;
     width: 100%;
-    z-index: 1;
+    position: relative;
+    margin-top: 18%;
+    height: 39rem;
+    overflow: hidden;
   }
   &__images {
+    width: 74.2%;
+    height: 228rem;
     position: absolute;
-    height: 192rem;
-    top: 22%;
-    left: 13%;
+    top: 6.5%;
+    left: 13.5%;
   }
-  &__image-container {
-    height: 32rem;
-    width: 100%;
-    overflow: hidden !important;
-  }
-
   &__img {
-    width: 87%;
-    height: 32rem;
-    display: inline-block;
+    height: 31.3rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 5rem;
   }
   &__right {
     flex: 1;
