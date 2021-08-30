@@ -936,6 +936,7 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: -1;
   margin-bottom: 5rem;
 }
 
