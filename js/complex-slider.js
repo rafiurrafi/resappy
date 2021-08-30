@@ -17,6 +17,12 @@ function nextSlide(n) {
   setTimeout(() => {
     numbers[count].style.opacity = 1;
   }, 100);
+  // vertical slider
+  // imageToSlide.style.transform = "translateY(-50)px";
+  imageToSlide.style.transform =
+    "translate(" + 0 + "rem," + -count * 39 + "rem)";
+
+  //clone and falling animation
   const cloneNumber = numbers[count - 1].cloneNode(true);
   cloneNumber.style.opacity = 1;
   if (!(count % 2))

@@ -925,6 +925,10 @@ body {
   position: absolute;
   top: 6.5%;
   left: 13.5%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 .complex-slider__img {
