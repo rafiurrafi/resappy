@@ -1,48 +1,28 @@
 const numbers = document.querySelectorAll(".complex-slider__number");
-const texts = document.querySelectorAll(".complex-slider__text");
-const numberContainer = document.querySelector(".complex-slider__number-box");
+const numbersContainer = document.querySelector(".complex-slider__number-area");
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-
-  //faalling
-  const cloneNumber = numbers[n - 1].cloneNode(true);
-  cloneNumber.style.color = "red";
-  cloneNumber.className == "complex-slider__number-clone";
-  cloneNumber.style.animationName = "moveToBottom";
-  numberContainer.appendChild(cloneNumber);
-  console.log(cloneNumber);
+for (let i = 0; i < numbers.length; i++) {
+  numbers[i].style.opacity = 0;
 }
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-function showSlides(n) {
-  var i;
-  // var slides = document.getElementsByClassName("mySlides");
-  // var dots = document.getElementsByClassName("dot");
-
-  if (n > 5) {
-    return;
-  }
-
-  for (i = 0; i < numbers.length; i++) {
+numbers[0].style.opacity = 1;
+var count = 0;
+console.log(count);
+function nextSlide(n) {
+  if (count > 4) return;
+  count++;
+  for (let i = 0; i < numbers.length; i++) {
     numbers[i].style.opacity = 0;
-    numbers[i].style.visibility = "hidden";
-    texts[i].style.opacity = 0;
-    numbers[i].style.visibility = "hidden";
   }
-  // for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  // }
-
-  numbers[slideIndex - 1].style.opacity = 1;
-  numbers[slideIndex - 1].style.visibility = "visible";
-  texts[slideIndex - 1].style.opacity = 1;
-  numbers[slideIndex - 1].style.visibility = "visible";
+  setTimeout(() => {
+    numbers[count].style.opacity = 1;
+  }, 100);
+  const cloneNumber = numbers[count - 1].cloneNode(true);
+  cloneNumber.style.opacity = 1;
+  if (!(count % 2))
+    cloneNumber.classList.add("complex-slider__number-clone--1");
+  else cloneNumber.classList.add("complex-slider__number-clone--2");
+  numbersContainer.appendChild(cloneNumber);
+  setTimeout(() => {
+    cloneNumber.remove();
+  }, 400);
 }
