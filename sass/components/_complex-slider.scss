@@ -60,6 +60,16 @@
     z-index: -1;
     margin-bottom: 5rem;
   }
+  &__control {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+    &:not(:first-child) {
+      margin-left: 3rem;
+    }
+  }
   &__right {
     flex: 1;
   }

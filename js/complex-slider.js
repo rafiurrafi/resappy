@@ -33,3 +33,12 @@ function nextSlide(n) {
     cloneNumber.remove();
   }, 400);
 }
+function goSlider(slideNo) {
+  for (let i = 0; i < numbers.length; i++) {
+    numbers[i].style.opacity = 0;
+  }
+  numbers[slideNo - 1].style.opacity = 1;
+  // vertical slider
+  imageToSlide.style.transform =
+    "translate(" + 0 + "rem," + -(slideNo - 1) * 37 + "rem)";
+}
