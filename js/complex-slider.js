@@ -1,5 +1,6 @@
 const numbers = document.querySelectorAll(".complex-slider__number");
 const numbersContainer = document.querySelector(".complex-slider__number-area");
+const imageToSlide = document.querySelector(".complex-slider__images");
 
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].style.opacity = 0;

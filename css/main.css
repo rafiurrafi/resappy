@@ -908,11 +908,12 @@ body {
 }
 
 .complex-slider__image-box {
-  height: 95vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 40vh;
+  width: 40vw;
   position: relative;
+  background-image: url(../../img/icons/slider/plane-laptop-screen.svg);
+  background-size: cover;
+  background-position: center;
 }
 
 .complex-slider__laptop {
@@ -922,8 +923,15 @@ body {
 
 .complex-slider__images {
   position: absolute;
+  height: 192rem;
   top: 22%;
   left: 13%;
+}
+
+.complex-slider__image-container {
+  height: 32rem;
+  width: 100%;
+  overflow: hidden !important;
 }
 
 .complex-slider__img {

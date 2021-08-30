@@ -32,9 +32,12 @@
     }
   }
   &__image-box {
-    height: 95vh;
-    display: flex;
+    height: 40vh;
+    width: 40vw;
     position: relative;
+    background-image: url(../../img/icons/slider/plane-laptop-screen.svg);
+    background-size: cover;
+    background-position: center;
   }
   &__laptop {
     width: 100%;
@@ -42,9 +45,16 @@
   }
   &__images {
     position: absolute;
+    height: 192rem;
     top: 22%;
     left: 13%;
   }
+  &__image-container {
+    height: 32rem;
+    width: 100%;
+    overflow: hidden !important;
+  }
+
   &__img {
     width: 87%;
     height: 32rem;
