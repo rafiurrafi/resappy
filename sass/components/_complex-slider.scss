@@ -23,11 +23,13 @@
       color: $color-primary;
       animation-name: moveToRightBottom;
       animation-duration: 0.4s;
+      font-weight: 700;
     }
     &-clone--2 {
       color: $color-secondary;
       animation-name: moveToBottom;
       animation-duration: 0.4s;
+      font-weight: 700;
     }
   }
   // image
@@ -58,14 +60,32 @@
     z-index: -1;
     margin-bottom: 5rem;
   }
+  &__controls {
+    div {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.4s ease-in-out;
+      &:not(:first-child) {
+        margin-left: 3rem;
+      }
+    }
+  }
   &__control {
     display: inline-block;
     height: 2rem;
     width: 2rem;
-    background-color: $color-primary;
+    background-color: lighten($color-primary, 0.15);
     border-radius: 50%;
-    &:not(:first-child) {
-      margin-left: 3rem;
+    &.active {
+      background-color: blueviolet;
+    }
+
+    &--clone {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      background-color: green !important;
+      transition: transform 0.4s ease-in-out;
     }
   }
   &__right {

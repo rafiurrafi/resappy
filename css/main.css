@@ -893,6 +893,7 @@ body {
           animation-name: moveToRightBottom;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
+  font-weight: 700;
 }
 
 .complex-slider__number-clone--2 {
@@ -901,6 +902,7 @@ body {
           animation-name: moveToBottom;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
+  font-weight: 700;
 }
 
 .complex-slider__img-box {
@@ -936,16 +938,40 @@ body {
   margin-bottom: 5rem;
 }
 
+.complex-slider__controls div {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.complex-slider__controls div:not(:first-child) {
+  margin-left: 3rem;
+}
+
 .complex-slider__control {
   display: inline-block;
   height: 2rem;
   width: 2rem;
-  background-color: #ee2b47;
+  background-color: #ee2c48;
   border-radius: 50%;
 }
 
-.complex-slider__control:not(:first-child) {
-  margin-left: 3rem;
+.complex-slider__control.active {
+  background-color: blueviolet;
+}
+
+.complex-slider__control--clone {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  background-color: green !important;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 .complex-slider__right {

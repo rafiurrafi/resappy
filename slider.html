@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <title>Slider playing</title>
   </head>
@@ -58,38 +62,59 @@
               </div>
             </div>
           </div>
-          <a href="javascript:void(0)" onclick="nextSlide(+1)">Next</a>
+
+          <div class="complex-slider__right">
+            <a href="javascript:void(0)" onclick="nextSlide(-1)" id="cs-prev"
+              ><i class="fa fa-angle-left"></i
+            ></a>
+            <a href="javascript:void(0)" onclick="nextSlide(+1)" id="cs-next"
+              ><i class="fa fa-angle-right"></i
+            ></a>
+          </div>
+
           <div class="complex-slider__controls">
-            <a
-              href="javascript:void(0)"
-              onclick="goSlider(1)"
-              class="complex-slider__control"
-            ></a>
-            <a
-              href="javascript:void(0)"
-              onclick="goSlider(2)"
-              class="complex-slider__control"
-            ></a>
-            <a
-              href="javascript:void(0)"
-              onclick="goSlider(3)"
-              class="complex-slider__control"
-            ></a>
-            <a
-              href="javascript:void(0)"
-              onclick="goSlider(4)"
-              class="complex-slider__control"
-            ></a>
-            <a
-              href="javascript:void(0)"
-              onclick="goSlider(5)"
-              class="complex-slider__control"
-            ></a>
-            <a
-              href="javascript:void(0)"
-              onclick="goSlider(6)"
-              class="complex-slider__control"
-            ></a>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="goSlider(1, this)"
+                class="complex-slider__control"
+              ></a>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="goSlider(2, this)"
+                class="complex-slider__control"
+              ></a>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="goSlider(3, this)"
+                class="complex-slider__control"
+              ></a>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="goSlider(4, this)"
+                class="complex-slider__control"
+              ></a>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="goSlider(5, this)"
+                class="complex-slider__control"
+              ></a>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="goSlider(6, this)"
+                class="complex-slider__control"
+              ></a>
+            </div>
           </div>
         </div>
       </div>
