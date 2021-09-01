@@ -61,10 +61,18 @@
     object-fit: cover;
     margin-bottom: 5rem;
   }
+  &__optional-img {
+    display: inline-block;
+    width: 50rem;
+    position: absolute;
+    bottom: -40%;
+    left: -10%;
+    transition: opacity 0.5s;
+  }
   &__controls {
     position: absolute;
-    bottom: -20%;
-    left: 25%;
+    bottom: -15%;
+    left: 35%;
     div {
       position: relative;
       display: inline-block;

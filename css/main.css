@@ -940,10 +940,20 @@ body {
   margin-bottom: 5rem;
 }
 
+.complex-slider__optional-img {
+  display: inline-block;
+  width: 50rem;
+  position: absolute;
+  bottom: -40%;
+  left: -10%;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
 .complex-slider__controls {
   position: absolute;
-  bottom: -20%;
-  left: 25%;
+  bottom: -15%;
+  left: 35%;
 }
 
 .complex-slider__controls div {

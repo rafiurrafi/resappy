@@ -4,9 +4,11 @@ const numbersContainer = document.querySelector(".complex-slider__number-area");
 const imageToSlide = document.querySelector(".complex-slider__images");
 const sliderContents = document.querySelectorAll(".complex-slider__content");
 const sliderControls = document.querySelectorAll(".complex-slider__control");
+const optionalImage = document.querySelector(".complex-slider__optional-img");
 const sliderControlContainer = document.querySelectorAll(
   ".complex-slider__controls div"
 );
+
 //slider style
 const complexSliderPrev = document.querySelector("#cs-prev");
 const complexSliderNext = document.querySelector("#cs-next");
@@ -71,6 +73,10 @@ function nextSlide() {
   );
   controlClone.style.transform = "translateX(" + 5.7 * (count + 1) + "rem)";
 
+  //show optional image
+  if (count === 0 || count === 3) optionalImage.style.opacity = 1;
+  else optionalImage.style.opacity = 0;
+
   //   increment count
   count += 1;
   currentActiveControl = count;
@@ -127,6 +133,10 @@ function prevSlide() {
   );
   controlClone.style.transform = "translateX(" + 5.7 * (count - 1) + "rem)";
 
+  //show optional image
+  if (count === 0 || count === 3) optionalImage.style.opacity = 1;
+  else optionalImage.style.opacity = 0;
+
   //   increment count
   count -= 1;
   currentActiveControl = count;
@@ -169,5 +179,10 @@ function goSlider(slideNo, evt) {
   setTimeout(() => {
     cloneNumber.remove();
   }, 700);
+
+  //show optional image
+  if (count === 0 || count === 3) optionalImage.style.opacity = 1;
+  else optionalImage.style.opacity = 0;
+
   currentActiveControl = slideNo - 1;
 }
