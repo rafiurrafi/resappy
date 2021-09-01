@@ -870,6 +870,7 @@ body {
 
 .complex-slider__number-area {
   position: relative;
+  height: 3rem;
   font-size: 30rem;
   z-index: -10;
 }
@@ -880,8 +881,8 @@ body {
 
 .complex-slider__number {
   position: absolute;
-  top: -5%;
-  left: -7%;
+  top: -100%;
+  left: -10%;
 }
 
 .complex-slider__number-clone--1 {
@@ -941,7 +942,7 @@ body {
 
 .complex-slider__controls {
   position: absolute;
-  bottom: -30%;
+  bottom: -20%;
   left: 25%;
 }
 
@@ -974,7 +975,8 @@ body {
   position: absolute;
   top: 3px;
   left: 0;
-  background-color: green !important;
+  display: inline-block;
+  background-color: #ee2b47 !important;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
@@ -984,7 +986,7 @@ body {
 .complex-slider__pagination {
   position: absolute;
   right: 3rem;
-  bottom: -40%;
+  bottom: -30%;
 }
 
 .complex-slider__pagination #cs-prev {
@@ -993,9 +995,14 @@ body {
   transition: opacity 0.5s;
 }
 
-.complex-slider__pagination #cs-next {
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+.complex-slider__pagination .cs-next-end {
+  display: inline-block;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .complex-slider__right {

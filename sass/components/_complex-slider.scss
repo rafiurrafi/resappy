@@ -6,6 +6,7 @@
   }
   &__number-area {
     position: relative;
+    height: 3rem;
     font-size: 30rem;
     z-index: -10;
   }
@@ -14,8 +15,8 @@
   }
   &__number {
     position: absolute;
-    top: -5%;
-    left: -7%;
+    top: -100%;
+    left: -10%;
 
     &-clone--1 {
       color: $color-primary;
@@ -62,7 +63,7 @@
   }
   &__controls {
     position: absolute;
-    bottom: -30%;
+    bottom: -20%;
     left: 25%;
     div {
       position: relative;
@@ -87,20 +88,23 @@
       position: absolute;
       top: 3px;
       left: 0;
-      background-color: green !important;
+      display: inline-block;
+      background-color: $color-primary !important;
       transition: transform 0.4s ease-in-out;
     }
   }
   &__pagination {
     position: absolute;
     right: 3rem;
-    bottom: -40%;
+    bottom: -30%;
     #cs-prev {
       margin-right: 3rem;
       transition: opacity 0.5s;
     }
-    #cs-next {
-      transition: opacity 0.5s;
+    .cs-next-end {
+      display: inline-block;
+      transition: opacity 0.5s, transform 0.5s;
+      transform: rotateY(180deg);
     }
   }
   &__right {
