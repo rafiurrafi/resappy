@@ -9,10 +9,10 @@
   &__number-area {
     position: relative;
     font-size: 30rem;
+    z-index: -10;
   }
   &__numbers {
     opacity: 0.8;
-    z-index: -10;
   }
   &__number {
     position: absolute;
@@ -22,14 +22,16 @@
     &-clone--1 {
       color: $color-primary;
       animation-name: moveToRightBottom;
-      animation-duration: 0.4s;
+      animation-duration: 0.7s;
       font-weight: 700;
+      animation-delay: 0.1s;
     }
     &-clone--2 {
       color: $color-secondary;
       animation-name: moveToBottom;
-      animation-duration: 0.4s;
+      animation-duration: 0.7s;
       font-weight: 700;
+      animation-delay: 0.1s;
     }
   }
   // image
@@ -43,7 +45,7 @@
     position: relative;
     margin-top: 18%;
     height: 39rem;
-    overflow: hidden;
+    // overflow: hidden;
   }
   &__images {
     width: 74.2%;
@@ -52,12 +54,13 @@
     top: 6.5%;
     left: 13.5%;
     transition: transform 0.4s ease-in-out;
+    z-index: -1;
   }
   &__img {
+    position: relative;
     height: 31.3rem;
     width: 100%;
     object-fit: cover;
-    z-index: -1;
     margin-bottom: 5rem;
   }
   &__controls {
