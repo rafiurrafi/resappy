@@ -1022,7 +1022,7 @@ body {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);

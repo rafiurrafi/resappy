@@ -23,6 +23,13 @@ complexSliderPrev.style.opacity = 0;
 
 // add next slider event handler
 function nextSlide() {
+  if (count >= 4) {
+    complexSliderNext.classList.add("cs-next-end");
+    complexSliderNext.setAttribute("onclick", "prevSlide()");
+    complexSliderPrev.style.opacity = 0;
+    console.log(count);
+    return;
+  }
   if (count > 4) {
     return;
   }
@@ -72,7 +79,19 @@ function nextSlide() {
 
 // add pev slider event handler
 function prevSlide() {
-  if (count <= 0) return;
+  if (count <= 0) {
+    complexSliderPrev.style.opacity = 0;
+    return;
+  }
+
+  if (count == 4) {
+    complexSliderNext.setAttribute("onclick", "nextSlide()");
+    complexSliderNext.classList.remove("cs-next-end");
+    complexSliderPrev.style.opacity = 1;
+
+    console.log(complexSliderNext);
+  }
+
   for (let i = 0; i < numbers.length; i++) {
     numbers[i].style.opacity = 0;
   }
