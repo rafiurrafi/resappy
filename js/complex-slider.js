@@ -2,6 +2,7 @@
 const numbers = document.querySelectorAll(".complex-slider__number");
 const numbersContainer = document.querySelector(".complex-slider__number-area");
 const imageToSlide = document.querySelector(".complex-slider__images");
+const sliderContents = document.querySelectorAll(".complex-slider__content");
 const sliderControls = document.querySelectorAll(".complex-slider__control");
 const sliderControlContainer = document.querySelectorAll(
   ".complex-slider__controls div"
@@ -30,11 +31,18 @@ function nextSlide() {
   // Show item
   setTimeout(() => {
     numbers[count].style.opacity = 1;
-  }, 150);
+  }, 200);
 
   // vertical slider
   imageToSlide.style.transform =
     "translate(" + 0 + "rem," + -(count + 1) * 37 + "rem)";
+
+  //show contents
+  for (let i = 0; i < sliderContents.length; i++)
+    sliderContents[i].style.opacity = 0;
+  setTimeout(() => {
+    sliderContents[count].style.opacity = 1;
+  }, 150);
 
   //clone and falling animation
   const cloneNumber = numbers[count].cloneNode(true);
@@ -63,6 +71,14 @@ function prevSlide() {
   // vertical slider
   imageToSlide.style.transform =
     "translate(" + 0 + "rem," + -(count - 1) * 37 + "rem)";
+
+  //show contents
+  for (let i = 0; i < sliderContents.length; i++)
+    sliderContents[i].style.opacity = 0;
+  setTimeout(() => {
+    sliderContents[count].style.opacity = 1;
+  }, 150);
+
   //clone and falling animation
   const cloneNumber = numbers[count].cloneNode(true);
   // if (count !== 1) cloneNumber.style.animationDelay = ".1s";
@@ -76,4 +92,26 @@ function prevSlide() {
   }, 400);
   //   increment count
   count -= 1;
+}
+
+// direct access function
+//function what happend when click on slider control
+function goSlider(slideNo, evt) {
+  //add active class to slider control
+  for (let i = 0; i < sliderContents.length; i++)
+    sliderControls[i].classList.remove("active");
+  sliderControls[slideNo - 1].classList.add("active");
+  for (let i = 0; i < numbers.length; i++) {
+    numbers[i].style.opacity = 0;
+  }
+  numbers[slideNo - 1].style.opacity = 1;
+  // vertical slider
+  imageToSlide.style.transform =
+    "translate(" + 0 + "rem," + -(slideNo - 1) * 37 + "rem)";
+  //show contents
+  for (let i = 0; i < sliderContents.length; i++)
+    sliderContents[i].style.opacity = 0;
+  setTimeout(() => {
+    sliderContents[slideNo - 1].style.opacity = 1;
+  }, 150);
 }

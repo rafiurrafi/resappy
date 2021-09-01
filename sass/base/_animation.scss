@@ -8,7 +8,7 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(50vh);
+    transform: translateY(100vh);
   }
 }
 @keyframes moveToRightBottom {
@@ -21,6 +21,6 @@
   }
   100% {
     opacity: 0;
-    transform: translate(45rem, 50vh);
+    transform: translate(45rem, 100vh);
   }
 }
