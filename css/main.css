@@ -855,6 +855,11 @@ body {
   color: white;
 }
 
+.section-complex-slider {
+  position: relative;
+  margin-bottom: 30rem;
+}
+
 .complex-slider {
   display: -webkit-box;
   display: -ms-flexbox;

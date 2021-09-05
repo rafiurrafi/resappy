@@ -181,7 +181,7 @@ function goSlider(slideNo) {
   if (colorChanged % 2) cloneNumber.style.color = "#ee2b47";
   else cloneNumber.style.color = "#34374c";
 
-  if (!(count % 2))
+  if (!(colorChangeCounter % 2))
     cloneNumber.classList.add("complex-slider__number-clone--1");
   else cloneNumber.classList.add("complex-slider__number-clone--2");
   numbersContainer.appendChild(cloneNumber);
