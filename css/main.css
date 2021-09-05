@@ -886,7 +886,6 @@ body {
 }
 
 .complex-slider__number-clone--1 {
-  color: #ee2b47;
   -webkit-animation-name: moveToRightBottom;
           animation-name: moveToRightBottom;
   -webkit-animation-duration: 0.7s;
@@ -897,7 +896,6 @@ body {
 }
 
 .complex-slider__number-clone--2 {
-  color: #34374c;
   -webkit-animation-name: moveToBottom;
           animation-name: moveToBottom;
   -webkit-animation-duration: 0.7s;
@@ -1000,17 +998,28 @@ body {
 }
 
 .complex-slider__pagination #cs-prev {
-  margin-right: 3rem;
+  margin-right: 5rem;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
-.complex-slider__pagination .cs-next-end {
+.complex-slider__pagination #cs-prev,
+.complex-slider__pagination #cs-next {
   display: inline-block;
   -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: opacity 0.5s, transform 0.5s;
   transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.complex-slider__pagination #cs-prev img,
+.complex-slider__pagination #cs-next img {
+  display: inline-block;
+  height: 8rem;
+}
+
+.complex-slider__pagination .cs-next-end {
+  display: inline-block;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }

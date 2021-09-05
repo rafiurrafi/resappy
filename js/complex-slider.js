@@ -15,6 +15,8 @@ const complexSliderNext = document.querySelector("#cs-next");
 
 //initialize slider
 let currentActiveControl = 0;
+let colorChangeCounter = 0;
+let colorChanged = 0;
 
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].style.opacity = 0;
@@ -29,6 +31,8 @@ complexSliderPrev.style.opacity = 0;
 function nextSlide() {
   complexSliderPrev.style.opacity = 1;
   count += 1;
+  colorChangeCounter++;
+  if (!(colorChangeCounter % 2)) colorChanged++;
   if (count === 5) {
     complexSliderNext.classList.add("cs-next-end");
     complexSliderNext.setAttribute("onclick", "prevSlide()");
@@ -40,7 +44,6 @@ function nextSlide() {
     complexSliderPrev.style.opacity = 0;
     return;
   }
-  console.log(count);
   //hide all numbers
   for (let i = 0; i < numbers.length; i++) {
     numbers[i].style.opacity = 0;
@@ -61,9 +64,14 @@ function nextSlide() {
   const cloneNumber = numbers[count - 1].cloneNode(true);
   // if (count !== 1) cloneNumber.style.animationDelay = ".1s";
   cloneNumber.style.opacity = 1;
-  if (!(count % 2))
+
+  //changed color after to inc/dec
+  if (colorChanged % 2) cloneNumber.style.color = "#ee2b47";
+  else cloneNumber.style.color = "#34374c";
+
+  if (!(count % 2)) {
     cloneNumber.classList.add("complex-slider__number-clone--1");
-  else cloneNumber.classList.add("complex-slider__number-clone--2");
+  } else cloneNumber.classList.add("complex-slider__number-clone--2");
   numbersContainer.appendChild(cloneNumber);
   setTimeout(() => {
     cloneNumber.remove();
@@ -89,6 +97,8 @@ function prevSlide() {
   } else if (count == 0) return;
   //   increment count
   count -= 1;
+  colorChangeCounter++;
+  if (!(colorChangeCounter % 2)) colorChanged++;
   if (count === 4) {
     complexSliderNext.classList.remove("cs-next-end");
     complexSliderNext.setAttribute("onclick", "nextSlide()");
@@ -112,6 +122,11 @@ function prevSlide() {
   //clone and falling animation
   const cloneNumber = numbers[count].cloneNode(true);
   cloneNumber.style.opacity = 1;
+
+  //changed color after to inc/dec
+  if (colorChanged % 2) cloneNumber.style.color = "#ee2b47";
+  else cloneNumber.style.color = "#34374c";
+
   if (!(count % 2))
     cloneNumber.classList.add("complex-slider__number-clone--1");
   else cloneNumber.classList.add("complex-slider__number-clone--2");
@@ -140,6 +155,9 @@ function goSlider(slideNo) {
   );
   controlClone.style.transform = "translateX(" + 5.7 * (slideNo - 1) + "rem)";
 
+  colorChangeCounter++;
+  if (!(colorChangeCounter % 2)) colorChanged++;
+
   // Hide all numbers
   for (let i = 0; i < numbers.length; i++) {
     numbers[i].style.opacity = 0;
@@ -159,6 +177,10 @@ function goSlider(slideNo) {
   const cloneNumber = numbers[currentActiveControl].cloneNode(true);
   // if (count !== 1) cloneNumber.style.animationDelay = ".1s";
   cloneNumber.style.opacity = 1;
+  //changed color after to inc/dec
+  if (colorChanged % 2) cloneNumber.style.color = "#ee2b47";
+  else cloneNumber.style.color = "#34374c";
+
   if (!(count % 2))
     cloneNumber.classList.add("complex-slider__number-clone--1");
   else cloneNumber.classList.add("complex-slider__number-clone--2");

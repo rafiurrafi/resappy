@@ -19,14 +19,14 @@
     left: -10%;
 
     &-clone--1 {
-      color: $color-primary;
+      // color: $color-primary;
       animation-name: moveToRightBottom;
       animation-duration: 0.7s;
       font-weight: 700;
       animation-delay: 0.1s;
     }
     &-clone--2 {
-      color: $color-secondary;
+      // color: $color-secondary;
       animation-name: moveToBottom;
       animation-duration: 0.7s;
       font-weight: 700;
@@ -106,12 +106,21 @@
     right: 3rem;
     bottom: -30%;
     #cs-prev {
-      margin-right: 3rem;
+      margin-right: 5rem;
       transition: opacity 0.5s;
+    }
+    #cs-prev,
+    #cs-next {
+      display: inline-block;
+      transition: opacity 0.5s, transform 0.5s;
+      img {
+        display: inline-block;
+        height: 8rem;
+      }
     }
     .cs-next-end {
       display: inline-block;
-      transition: opacity 0.5s, transform 0.5s;
+
       transform: rotateY(180deg);
     }
   }
