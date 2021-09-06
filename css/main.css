@@ -2857,17 +2857,20 @@ body {
 }
 
 .price-table__btns .btn--secondary {
-  width: 24%;
+  width: 23%;
   font-size: 1.5rem;
   display: inline-block;
+  margin-left: 0.7rem;
 }
 
-.price-table__btns .btn--secondary:not(:first-child) {
-  margin-left: 0.3rem;
+@media (max-width: 56.25em) {
+  .price-table__btns .btn--secondary {
+    width: 22.5%;
+  }
 }
 
 .single-tr {
-  width: 100% !important;
+  width: 96.5% !important;
   background-color: #f9f9f9;
   padding: 2rem;
   font-weight: 700;
