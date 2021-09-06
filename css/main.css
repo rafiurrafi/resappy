@@ -2733,6 +2733,12 @@ body {
   color: #ee2b47;
 }
 
+@media (max-width: 75em) {
+  .section-price-main .row {
+    padding: 0 2%;
+  }
+}
+
 .heading-price {
   font-size: 7rem;
   margin-top: 8rem;
@@ -2813,6 +2819,12 @@ body {
   width: calc(100% - 4rem);
 }
 
+@media (max-width: 37.5em) {
+  .price-table-container {
+    overflow-x: auto;
+  }
+}
+
 .price-table {
   width: 100%;
   border: 1px solid #f1f1f1;
@@ -2851,26 +2863,13 @@ body {
   height: 2rem;
 }
 
-.price-table__btns {
-  margin-left: 33.5%;
-  padding: 1rem 0;
-}
-
-.price-table__btns .btn--secondary {
-  width: 23%;
+.price-table .btn--secondary {
   font-size: 1.5rem;
   display: inline-block;
-  margin-left: 0.7rem;
+  padding: 1rem 1.5rem;
 }
 
-@media (max-width: 56.25em) {
-  .price-table__btns .btn--secondary {
-    width: 22.5%;
-  }
-}
-
-.single-tr {
-  width: 96.5% !important;
+#single-tr {
   background-color: #f9f9f9;
   padding: 2rem;
   font-weight: 700;
