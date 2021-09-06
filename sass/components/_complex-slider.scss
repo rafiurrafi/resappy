@@ -1,12 +1,29 @@
 .section-complex-slider {
   position: relative;
   margin-bottom: 30rem;
+  @include respond(tab-port) {
+    min-height: 30rem;
+  }
+  .row {
+    @include respond(tab-port) {
+      min-height: 25rem;
+    }
+    @include respond(phone) {
+      min-height: 32rem;
+    }
+  }
 }
 .complex-slider {
   display: flex;
   position: relative;
+  @include respond(tab-port) {
+    display: block;
+  }
   &__left {
     flex: 0 0 60%;
+    @include respond(tab-port) {
+      display: none;
+    }
   }
   &__number-area {
     position: relative;
@@ -77,6 +94,12 @@
     position: absolute;
     bottom: -15%;
     left: 35%;
+    @include respond(tab-port) {
+      left: 25%;
+    }
+    @include respond(phone) {
+      left: 3.5%;
+    }
     div {
       position: relative;
       display: inline-block;
@@ -109,9 +132,17 @@
     position: absolute;
     right: 3rem;
     bottom: -30%;
+    @include respond(phone) {
+      right: 2rem;
+      bottom: -18%;
+    }
+
     #cs-prev {
       margin-right: 5rem;
       transition: opacity 0.5s;
+      @include respond(phone) {
+        margin-right: 3rem;
+      }
     }
     #cs-prev,
     #cs-next {
@@ -120,6 +151,9 @@
       img {
         display: inline-block;
         height: 8rem;
+        @include respond(phone) {
+          height: 4rem;
+        }
       }
     }
     .cs-next-end {
@@ -143,5 +177,10 @@
     top: 55%;
     left: 0;
     transform: translateY(-50%);
+    @include respond(tab-port) {
+      transform: translateY(0);
+      margin-bottom: 5rem;
+      height: 100%;
+    }
   }
 }

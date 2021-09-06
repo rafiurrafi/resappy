@@ -1,36 +1,43 @@
-.form-inline{
-    width: 90%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 1.8rem;
-    &__input{
-        background-color: rgba($color: #fff, $alpha: .6);
-        color: #000;
-        display: inline-block;
-        flex: 0 0 70%;
-        border-top-left-radius: .5rem;
-        border-bottom-left-radius: .5rem;
-        padding: 1.5rem;
-        border: none;
-        &:focus{
-            outline: none;
-        }
-        &::-webkit-input-placeholder{
-            color: white;
-        }
+.form-inline {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.8rem;
+  &__input {
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    color: #000;
+    display: inline-block;
+    flex: 0 0 70%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    padding: 1.5rem;
+    border: none;
+    &:focus {
+      outline: none;
     }
-    &__btn{
-        font-weight: 700;
-        color: $color-white;
-        background-color: lighten($color-primary, .3);
-        text-decoration: none;
-        display: inline-block;
-        flex: 1;
-        text-align: center;
-        border-top-right-radius: .5rem;
-        border-bottom-right-radius: .5rem;
-        padding: 1.27rem 0;
-        // margin-top: -.3px;
+    &::-webkit-input-placeholder {
+      color: white;
     }
+    @include respond(phone) {
+      flex: 0 0 65%;
+    }
+  }
+  &__btn {
+    font-weight: 700;
+    color: $color-white;
+    background-color: lighten($color-primary, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 1.27rem 0;
+    // margin-top: -.3px;
+    @include respond(tab-port) {
+      padding: 1.27rem 0;
+      border: 1px solid lighten($color-primary, 0.3);
+    }
+  }
 }

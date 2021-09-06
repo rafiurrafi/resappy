@@ -5,7 +5,7 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
-  
+
   .row {
     position: relative;
     height: 100%;
@@ -40,7 +40,8 @@
     top: 30%;
     transform: translateY(-50%);
     @media (max-width: 40em) {
-      margin-left: 5rem;
+      margin-left: 2.5rem;
+      margin-right: 0.5rem;
     }
     @media (max-width: 385px) {
       margin-left: 2rem;
@@ -57,7 +58,7 @@
         color: $color-primary;
         position: relative;
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           display: block;
           bottom: 0.7rem;
@@ -69,10 +70,22 @@
         }
       }
     }
-    &--productivity{
+    &--productivity {
       width: 55%;
-      p{
+      @include respond(tab-port) {
+        width: 70%;
+      }
+      @include respond(phone) {
+        width: 94%;
+      }
+      p {
         font-size: 1.8rem;
+      }
+      .form-inline {
+        @include respond(phone) {
+          width: 100%;
+          font-size: 1.7rem;
+        }
       }
     }
   }
@@ -88,8 +101,12 @@
       margin-left: 4.5rem;
     }
   }
-  &--productivity{
-    background-image: linear-gradient(rgba($color-secondary, .8), rgba($color-secondary, .8)),url(../../img/BG-2.jpg);
+  &--productivity {
+    background-image: linear-gradient(
+        rgba($color-secondary, 0.8),
+        rgba($color-secondary, 0.8)
+      ),
+      url(../../img/BG-2.jpg);
   }
 }
 .header--blog {

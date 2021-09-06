@@ -16,7 +16,7 @@ body {
     display: inline-block;
     @include underline-after(40%);
   }
-  &--small{
+  &--small {
     font-size: 7rem;
   }
 }
@@ -77,9 +77,15 @@ body {
   font-size: 3rem;
   font-weight: 700;
 }
-.heading-title{
+.heading-title {
   font-size: 3.5rem;
   width: 55%;
   margin: 0 auto;
   text-align: center;
+  @include respond(tab-port) {
+    width: 70%;
+  }
+  @include respond(phone) {
+    width: 95%;
+  }
 }
